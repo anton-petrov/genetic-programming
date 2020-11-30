@@ -1,0 +1,311 @@
+(base) D:\Project with Python\chapter11>ipython
+Python 3.7.7 (default, Mar 23 2020, 23:19:08) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.13.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: import gp
+
+In [2]: winner=gp.evolve(5,100,gp.tournament,maxgen=50)
+<gp.node object at 0x000001479A2B9808>
+24
+<gp.node object at 0x000001479A2F7A48>
+46
+<gp.node object at 0x000001479A287388>
+46
+<gp.node object at 0x000001479A2B4C08>
+66
+<gp.node object at 0x000001479A2AA1C8>
+74
+<gp.node object at 0x000001479A2E2108>
+86
+<gp.node object at 0x000001479A2E2108>
+68
+<gp.node object at 0x000001479A2FFB88>
+72
+<gp.node object at 0x000001479A2B7988>
+60
+<gp.node object at 0x000001479A2EFE48>
+56
+<gp.node object at 0x000001479A35D588>
+64
+<gp.node object at 0x000001479A35D588>
+64
+<gp.node object at 0x000001479A2FD2C8>
+60
+<gp.node object at 0x000001479A2BC488>
+56
+<gp.node object at 0x000001479A2A6888>
+48
+<gp.node object at 0x000001479A2A6888>
+72
+<gp.node object at 0x000001479A2C6EC8>
+40
+<gp.node object at 0x000001479A2C6EC8>
+64
+<gp.node object at 0x000001479A34C388>
+60
+<gp.node object at 0x000001479A36DC88>
+60
+<gp.node object at 0x000001479A36DC88>
+56
+<gp.node object at 0x000001479A32C908>
+44
+<gp.node object at 0x000001479A327A08>
+48
+<gp.node object at 0x000001479A2CC588>
+42
+<gp.node object at 0x000001479A3FBD08>
+50
+<gp.node object at 0x000001479A355F88>
+56
+<gp.node object at 0x000001479A2D5108>
+50
+<gp.node object at 0x000001479A2D5108>
+58
+<gp.node object at 0x000001479A2D5108>
+66
+<gp.node object at 0x000001479A3B6AC8>
+44
+<gp.node object at 0x000001479A34CC48>
+54
+<gp.node object at 0x000001479A2DA2C8>
+68
+<gp.node object at 0x000001479A1B1888>
+66
+<gp.node object at 0x000001479A447AC8>
+54
+<gp.node object at 0x000001479A309708>
+56
+<gp.node object at 0x000001479A309708>
+44
+<gp.node object at 0x000001479A309708>
+48
+<gp.node object at 0x000001479A309708>
+58
+<gp.node object at 0x000001479A360A48>
+46
+<gp.node object at 0x000001479A360A48>
+50
+<gp.node object at 0x000001479A408508>
+56
+<gp.node object at 0x000001479A4DFF48>
+64
+<gp.node object at 0x000001479A0C7E08>
+52
+<gp.node object at 0x000001479A31B888>
+68
+<gp.node object at 0x000001479A1D5188>
+64
+<gp.node object at 0x000001479A3EBEC8>
+60
+<gp.node object at 0x000001479A2F9108>
+74
+<gp.node object at 0x000001479A3D4188>
+62
+<gp.node object at 0x000001479A3416C8>
+62
+<gp.node object at 0x000001479A3F0588>
+50
+subtract
+ p4
+ add
+  if
+   add
+    isgreater
+     8
+     p4
+    subtract
+     isgreater
+      add
+       p4
+       subtract
+        9
+        p4
+      p3
+     0
+   isgreater
+    subtract
+     multiply
+      p0
+      if
+       add
+        3
+        multiply
+         subtract
+          p2
+          p4
+         multiply
+          subtract
+           2
+           p3
+          multiply
+           1
+           p4
+       5
+       p3
+     p3
+    multiply
+     p0
+     p1
+   add
+    2
+    10
+  isgreater
+   add
+    subtract
+     multiply
+      add
+       multiply
+        multiply
+         if
+          p4
+          if
+           p2
+           multiply
+            p1
+            if
+             9
+             isgreater
+              0
+              p3
+             9
+           10
+          p0
+         add
+          7
+          add
+           p1
+           multiply
+            2
+            7
+        p0
+       p2
+      p1
+     subtract
+      subtract
+       subtract
+        10
+        multiply
+         p3
+         p2
+       6
+      0
+    10
+   add
+    1
+    3
+
+In [3]: gp.gridgame([winner, gp.humanplayer()])
+.  .  X  .
+.  .  .  .
+.  O  .  .
+.  .  .  .
+Your last move was -1
+ 0
+2 3
+ 1
+Enter move:
+1
+.  .  .  .
+.  .  X  .
+.  .  .  .
+.  O  .  .
+Your last move was 1
+ 0
+2 3
+ 1
+Enter move:
+2
+.  .  .  .
+.  .  .  X
+.  .  .  .
+O  .  .  .
+Your last move was 2
+ 0
+2 3
+ 1
+Enter move:
+1
+.  .  .  .
+.  .  .  .
+.  .  .  X
+O  .  .  .
+Your last move was 1
+ 0
+2 3
+ 1
+Enter move:
+2
+.  .  .  .
+.  .  .  .
+.  .  .  X
+O  .  .  .
+Your last move was 2
+ 0
+2 3
+ 1
+Enter move:
+0
+.  .  .  .
+.  .  .  .
+O  .  X  .
+.  .  .  .
+Your last move was 0
+ 0
+2 3
+ 1
+Enter move:
+1
+.  .  .  .
+.  .  X  .
+.  .  .  .
+O  .  .  .
+Your last move was 1
+ 0
+2 3
+ 1
+Enter move:
+2
+.  .  .  .
+.  X  .  .
+.  .  .  .
+O  .  .  .
+Your last move was 2
+ 0
+2 3
+ 1
+Enter move:
+1
+.  X  .  .
+.  .  .  .
+.  .  .  .
+O  .  .  .
+Your last move was 1
+ 0
+2 3
+ 1
+Enter move:
+0
+.  .  X  .
+.  .  .  .
+O  .  .  .
+.  .  .  .
+Your last move was 0
+ 0
+2 3
+ 1
+Enter move:
+3
+.  X  .  .
+.  .  .  .
+.  O  .  .
+.  .  .  .
+Your last move was 3
+ 0
+2 3
+ 1
+Enter move:
+0
+Out[3]: 0
+
+In [4]:
